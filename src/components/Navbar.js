@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-col lg:flex-row justify-between py-3 mx-6">
+    <nav className="flex flex-col lg:flex-row justify-between py-3 mx-6 mb-10">
       <div className="">
         {/* toUTCString() returns a date object as a string, according to UTC: */}
         <h3 className="text-xl font-bold text-gray-600">
