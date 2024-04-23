@@ -1,7 +1,14 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
 
 body{
   background: rgb(244, 244, 244);
