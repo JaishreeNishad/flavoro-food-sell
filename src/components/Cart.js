@@ -1,5 +1,6 @@
 import React from "react";
 import { IoMdClose } from "react-icons/io";
+import ItemCard from "./ItemCard";
 
 const Cart = () => {
   return (
@@ -9,6 +10,8 @@ const Cart = () => {
           <span className="font-bold text-xl text-gray-800">My Order</span>
           <IoMdClose className="text-gray-600 cursor-pointer hover:text-red-300 border-2 border-gray-600 hover:border-red-300 font-bold p-1 text-xl rounded-md" />
         </div>
+
+        <ItemCard />
         <div className="absolute bottom-0">
           <h3 className="font-semibold text-gray-800">Items :</h3>
           <h3 className="font-semibold text-gray-800">Total Amount :</h3>
