@@ -25,7 +25,7 @@ const FoodCart = ({ id, name, desc, price, rating, img }) => {
         <button
           className="p-1 text-white bg-green-500 text-sm rounded-lg hover:bg-green-600"
           onClick={() => {
-            dispatch(addToCart({ id, name, price, rating, qty: 1 }));
+            dispatch(addToCart({ id, name, price, rating, img, qty: 1 }));
           }}
         >
           Add to cart

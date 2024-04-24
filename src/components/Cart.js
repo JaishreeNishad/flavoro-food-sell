@@ -22,10 +22,19 @@ const Cart = () => {
             className="text-gray-600 cursor-pointer hover:text-red-300 border-2 border-gray-600 hover:border-red-300 font-bold p-1 text-xl rounded-md"
           />
         </div>
+        {cartItems.map((food) => {
+          return (
+            <ItemCard
+              key={food.id}
+              id={food.id}
+              name={food.name}
+              price={food.price}
+              img={food.img}
+              qty={food.qty}
+            />
+          );
+        })}
 
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
         <div className="absolute bottom-0">
           <h3 className="font-semibold text-gray-800">Items :</h3>
           <h3 className="font-semibold text-gray-800">Total Amount :</h3>
