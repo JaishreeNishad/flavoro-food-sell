@@ -4,8 +4,7 @@ import FoodData from "../data/FoodData.js";
 
 const FoodItems = () => {
   return (
-    <div>
-      .
+    <div className="flex flex-wrap gap-10 justify-center lg:justify-start mx-6 my-10">
       {FoodData.map((food) => {
         return (
           //data pass parent to child using props//

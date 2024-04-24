@@ -13,7 +13,7 @@ const FoodCart = ({ id, name, desc, price, rating, img }) => {
         <h2>{name}</h2>
         <span className="text-green-500">₹{price}</span>
       </div>
-      <p className="text-sm font-normal">{desc}</p>
+      <p className="text-sm font-normal">{desc.slice(0, 50)}...</p>
       <div className="flex justify-between">
         <span className="flex justify-center items-center">
           <FaStar className="mr-1 text-yellow-500" />
