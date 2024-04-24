@@ -7,7 +7,7 @@ const CartSlice = createSlice({
   }, //initial state of cart//
   //reducser(trigger): multiple function store//
   reducers: {
-    addCart: (state, action) => {
+    addToCart: (state, action) => {
       state.cart.push(action.payload);
     },
 
@@ -17,5 +17,5 @@ const CartSlice = createSlice({
   },
 });
 
-export const { addCart, removeFromCart } = CartSlice;
-export default CartSlice.actions;
+export const { addToCart, removeFromCart } = CartSlice.actions;
+export default CartSlice.reducer;
