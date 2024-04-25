@@ -7,6 +7,12 @@ import { MdShoppingCart } from "react-icons/md";
 const Cart = () => {
   const [activeCart, setActiveCart] = useState(true);
   const cartItems = useSelector((state) => state.cart.cart);
+
+  const totalQty = cartItems.reduce((totalQty, item) => totalQty + item.qty, 0);
+  const totalPrice = cartItems.reduce(
+    (totalPrice, item) => totalPrice + item.qty * item.price,
+    0
+  );
   console.log(cartItems, "array");
   return (
     <>
@@ -42,8 +48,10 @@ const Cart = () => {
         )}
 
         <div className="absolute bottom-0">
-          <h3 className="font-semibold text-gray-800">Items :</h3>
-          <h3 className="font-semibold text-gray-800">Total Amount :</h3>
+          <h3 className="font-semibold text-gray-800">Items : {totalQty}</h3>
+          <h3 className="font-semibold text-gray-800">
+            Total Amount :{totalPrice}
+          </h3>
           <hr className="w-[90vw] md:w-[18vw] my-2" />
           <button className="text-white px-3 py-2 bg-green-600 font-bold mb-5 w-[90vw] md:w-[18vw] rounded-lg">
             Checkout
@@ -52,7 +60,9 @@ const Cart = () => {
       </div>
       <MdShoppingCart
         onClick={() => setActiveCart(!activeCart)}
-        className="rounded-full bg-white bottom-4 right-4 shadow-md fixed text-5xl"
+        className={`rounded-full bg-white bottom-4 right-4 shadow-md fixed text-5xl ${
+          totalQty > 0 && "animate-bounce duration-500 transition-all"
+        }}`}
       />
     </>
   );
